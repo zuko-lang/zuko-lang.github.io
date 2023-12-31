@@ -1,0 +1,42 @@
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+
+#nav_bar_logo{
+
+	font-size: 40px;
+}
+
+#nav_link
+{
+  font-size: 20px;
+
+}
+
+
+
+
+#idno4{
+    border-radius: 80px;
+    padding: 10px;
+    width: 400px;
+    margin-top: 80px;
+    margin-right: 70px;
+    text-align: left;
+}
+
+#idno3{
+	margin-top: 100px;
+	font-family: Impact;
+}
+
+
+
+
+
+
+
+
+
