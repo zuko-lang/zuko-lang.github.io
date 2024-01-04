@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Plutonium Programming Language</title>
+    <title>Zuko Programming Language</title>
     <link rel="stylesheet" href="../css/theme.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -158,7 +158,7 @@ p{
       <div class="container-fluid">
         <!-- NavBar -->
         <nav class="navbar navbar-expand-lg navbar-dark ">
-          <a class="navbar-brand" href="/index.html">Plutonium</a>
+          <a class="navbar-brand" href="/index.html">Zuko</a>
 
           <button
             class="navbar-toggler"
@@ -207,16 +207,16 @@ p{
       </button><br><br><br>
       <h1>Error handling</h1>
       <br>
-      Plutonium is a managed language which means that there is no undefined behavior and
+      Zuko is a managed language which means that there is no undefined behavior and
       errors are reported as soon as they occur along with their line number. However
       sometimes you know that an error may occur and you want to execute some other code in
       case an error occurs instead of the interpreter just showing the error and exiting. Basically
-      you don’t want your program to blow up and want it to do something to tackle an error. Error handling is supported by Plutonium. You can
+      you don’t want your program to blow up and want it to do something to tackle an error. Error handling is supported by Zuko. You can
       use try catch statement to handle errors. However, remember that we are talking about
       runtime errors. You cannot catch Syntax Errors in your code.
       The code that might throw errors is placed inside the try block and catch block has the
       code that you want to run in case an error occurs.<br><br>
-       There are some global classes already defined by plutonium.
+       There are some global classes already defined by zuko.
       These are called error classes. There is a base class named <b>Error</b> and all other error classes are derived from it. When an error is thrown it 
       is a specific error. For example,<b>TypeError</b> is different from <b>MathError</b>. The base class <b>Error</b> 
       has only one public member <b>msg</b>. As all other error classes are derived from it so they also have this member.
@@ -250,7 +250,7 @@ Error division by zero
 &lt;MathError Object&gt;
 </pre>
 <br><br>
-In the above example <b>MathError</b> was thrown by division operator. Plutonium code can throw other kinds of errors too.
+In the above example <b>MathError</b> was thrown by division operator. Zuko code can throw other kinds of errors too.
 For example, an <b>ImportError</b> is thrown when there is an issue importing a module. Every runtime error has a class of it's own.
 <br><br>
 <table class="table table-bordered table-responsive">

@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Plutonium Programming Language</title>
+    <title>Zuko Programming Language</title>
     <link rel="stylesheet" href="../css/theme.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -158,7 +158,7 @@ p{
       <div class="container-fluid">
         <!-- NavBar -->
         <nav class="navbar navbar-expand-lg navbar-dark ">
-          <a class="navbar-brand" href="/index.html">Plutonium</a>
+          <a class="navbar-brand" href="/index.html">Zuko</a>
 
           <button
             class="navbar-toggler"
@@ -206,18 +206,18 @@ p{
         <i style="color:white" class="fa-solid fa-align-justify"></i> Table of Contents
       </button><br><br><br>
       <h1>The Standard Library</h1><br>
-      Plutonium interpreter provides a very minimal list of built-in functions. Because these built-
+      Zuko interpreter provides a very minimal list of built-in functions. Because these built-
       in functions are always loaded when the interpreter starts .Loading a lot of functions most
       of which will never be used is a bad idea so modules are introduced . A module is also
       some code (functions and classes) which you can import and use. Modules are not
-      imported by default. You have to tell plutonium which module to load. By using this module
+      imported by default. You have to tell zuko which module to load. By using this module
       system you only load what you are going to use.<br><br> There are two types of modules in
-      Plutonium.<br><br>
-      <h3>Plutonium Code files:</h3><br>
-      These are simple plutonium files having extension “.plt”. In topic Multifile Programs you
-      were taught how to import other plutonium files into your program and use them. The same
-      concepts apply here. There you created a new plutonium file of your own and imported it
-      into current program. There are a few plutonium files in C:\plutonium\std
+      Zuko.<br><br>
+      <h3>Zuko Code files:</h3><br>
+      These are simple zuko files having extension “.plt”. In topic Multifile Programs you
+      were taught how to import other zuko files into your program and use them. The same
+      concepts apply here. There you created a new zuko file of your own and imported it
+      into current program. There are a few zuko files in C:\plutonium\std
       These come along with the interpreter and can be imported and used as well. These files
       contain functions for common algorithms. Currently the std folder has files algo.plt,
       json.plt and ll.plt
@@ -309,7 +309,7 @@ All functions of each of these
 }</pre>
       <br>
       <h3>Native Modules:</h3><br>
-      These are modules written in C++ and not in Plutonium. These modules are present in <b>C:\
+      These are modules written in C++ and not in Zuko. These modules are present in <b>C:\
       plutonium\modules\</b> or <b>/opt/plutonium/modules</b> depending on the OS. 
       These shared objects(dlls in case of windows) .To import any of these you just simply use
       the following syntax:<br><br>
@@ -317,7 +317,7 @@ All functions of each of these
       <br>
       Note that no “.plt” or double quotes are added here. After loading a native module you use
       the member operator <b>'.'</b> to access it's members like you do with objects. For example, to
-      call sin function from math module you write <b>math.sin(@pi/2)</b>. Currently plutonium has
+      call sin function from math module you write <b>math.sin(@pi/2)</b>. Currently zuko has
       following native modules:<br><br>
       <h4>math</h4>
       <br>
@@ -350,7 +350,7 @@ All functions of each of these
         
 
       <h4>regex</h4><br>
-      regex module provides regular expression support in plutonium. It has following 3
+      regex module provides regular expression support in zuko. It has following 3
       functions:<br><br>
       <ul>
         <li>search(str,patt) → searches the parts of string that match regex and returns a list of these parts</li>
@@ -375,7 +375,7 @@ All functions of each of these
       <li>getDimensions() → returns a list containing number of rows and columns in console</li>
       </ul>
       <h4>bignum</h4><br>
-      bignum module provides arbitrary precision integers support in plutonium. It has only one
+      bignum module provides arbitrary precision integers support in zuko. It has only one
       class called bignum.
       Following are the members of this class:<br><br>
       <ul>
@@ -392,7 +392,7 @@ All functions of each of these
       <li>__noteq__(rhs)</li>
       </ul>
       <h4>turtle</h4><br>
-      turtle module provides turtle graphics support in plutonium. It has following functions:
+      turtle module provides turtle graphics support in zuko. It has following functions:
       <br><br>
       <ul>
         <li>setWindowSize(rows,cols) → sets the window size</li>
@@ -438,7 +438,7 @@ All functions of each of these
         <li>close(conn) → closes the connection</li>
       </ul>
       <h4>cgi</h4><br>
-      cgi module allows you to do CGI web programming in plutonium. Currently it supports GET
+      cgi module allows you to do CGI web programming in zuko. Currently it supports GET
       and POST(urlencoded + multipart) methods. It has following functions:
       <br><br> 
       <ul>
@@ -446,7 +446,7 @@ All functions of each of these
       </ul>
       <h4>libcurl</h4><br>
       Libcurl is a networking library originally written in C. This module is libcurl’s binding for
-      plutonium. It has following classes:<br><br>
+      zuko. It has following classes:<br><br>
       <h6>Curl</h6>
       <ul>
         <li>__construct__() → constructor</li>

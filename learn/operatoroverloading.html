@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Plutonium Programming Language</title>
+    <title>Zuko Programming Language</title>
     <link rel="stylesheet" href="../css/theme.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -157,7 +157,7 @@ p{
       <div class="container-fluid">
         <!-- NavBar -->
         <nav class="navbar navbar-expand-lg navbar-dark ">
-          <a class="navbar-brand" href="/index.html">Plutonium</a>
+          <a class="navbar-brand" href="/index.html">Zuko</a>
 
           <button
             class="navbar-toggler"
@@ -208,14 +208,14 @@ p{
       Objects of any class only support the is operator by default. The is operator   returns true if
       two operands are pointing to same object in memory. You can overload operators for a
       class . Doing this allows you to use them like regular data types and it also makes your
-      code more readable sometimes. In Plutonium, operators are overloading for a class object
+      code more readable sometimes. In Zuko, operators are overloading for a class object
       by adding some special functions to the class.
       <br> These special functions are member
       functions with special names. For example, to overload ‘+’ operator for a class object you
       define a member function “__add__” and it takes one argument as ‘+’ is a binary operator.
       This function considers self as lhs and argument as rhs .This function then computes self +
       argument and   returns a value. Whenever you try obj1+obj2 or obj1+x and obj1’s class has
-      __add__ function defined in it. Plutonium will call obj1.__add__(obj2)<br>
+      __add__ function defined in it. Zuko will call obj1.__add__(obj2)<br>
       Following example illustrates how all different operators can be overloaded:<br>
 <br><br>
 <pre class="plutoniumcode"><span class="keyword2">class</span> <span class="id">Integer</span>
