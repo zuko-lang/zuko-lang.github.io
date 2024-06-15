@@ -24,17 +24,8 @@ var pageIndex = {
   22: ["File Handling","filehandling.html"],
   23: ["Error handling","errorhandling.html"],
   24: ["Standard Library","stdlib.html"],
-  "total": 25
+  25: ["Bignumber Module","bignum.html"],
+  "total": 26
 };
-function removeWatermark()
-{
-  var coll = document.getElementsByTagName('img');
-  for(var i=0;i<coll.length;i++)
-  {
-    if(coll[i].alt == "www.000webhost.com")
-    {
-      coll[i].style.display = "none";
-    }
-  }
-}
+
 window.addEventListener("load",removeWatermark);

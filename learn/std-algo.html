@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zuko Programming Language</title>
+    <link rel="stylesheet" href="../css/theme.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font AweSome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"5
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- 1) BootStrap Link 2) JS link to use Bootstrap Functionality 3)  CSS Stylesheets Link -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="pageIndex.js"></script>
+    <script>
+      var currPage = -1;
+      function redirect(url)
+      {
+        window.location.href = url;
+      }
+      function addLinks()
+      {
+        var div = document.getElementById('sidebarlinks');
+        var total = pageIndex["total"];
+        var path = window.location.pathname;
+        var page = path.split("/").pop();
+        console.log( page );
+        for(var i=0;i<total;i++)
+        {
+          if(page == pageIndex[i][1])
+            currPage = i;
+          const link = document.createElement("a");
+          link.innerHTML = pageIndex[i][0];
+          link.href = pageIndex[i][1];
+          link.classList.add("sidebarlink");
+          const br = document.createElement("br");
+          div.appendChild(link);
+          div.appendChild(br);
+        }
+      }
+      function nextPage()
+      {
+        var i = currPage+1;
+        var href = pageIndex[i][1];
+        window.location.href = href;
+      }
+      function prevPage()
+      {
+        var i = currPage-1;
+        var href = pageIndex[i][1];
+        window.location.href = href;
+      }
+    </script>
+  </head>
+  <style>
+body{
+/*  font-family: "Montserrat";
+  */
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#Tittle{
+
+  background-color: #5D3891;
+  color: #ffff;
+}
+.R1{
+  background-color: #5D3891;
+}
+
+
+/* Navbar */
+
+.navbar{
+
+  /* position: absolute; */
+
+}
+h1,h2,h3,h4,h5,h6,i
+{
+  color: black;
+}
+body
+{
+  /*color: #8f8f8f;
+*/
+}
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2rem;
+  font-weight: bold;
+  /* margin-left: 1rem; */
+}
+.nav-item{
+  padding: 0 18px;
+}
+
+.nav-link{
+  font-size: 1.2rem;
+  font-family:  "Montserrat";
+  font-weight: 300;
+}
+
+
+p{
+  color: #8f8f8f;
+
+}
+
+.plutoniumcode
+{
+  color:white;
+  min-width:50%;
+}
+
+.icon{
+  color: #000;
+  margin-bottom: 1rem;
+}
+#sidebarlinks a {
+  display: block;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+}
+#sidebarlinks a:hover{
+  background-color: #555;
+  color: white;
+}
+
+  </style>
+  <body onload="addLinks()">
+
+    <section id="Tittle">
+      <div class="container-fluid">
+        <!-- NavBar -->
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+          <a class="navbar-brand" href="/index.html">Zuko</a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/downloads">Download</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/learn">Documentation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Contacts.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Topics</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="sidebarlinks">
+
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="container" style="text-align: justify;">
+      <br>
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        <i style="color:white" class="fa-solid fa-align-justify"></i> Table of Contents
+      </button><br><br><br>
+      <h1>std/algo</h1><br>
+      <h4>algo::count_set_bits( x )</h4><b>Description: </b>Counts the number of set bits in an integer 32 bit<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;x: </b> An integer 32 bit<br><b>Returns: </b>number of set bits
+      <br><br><h4>algo::insertionSort( nums )</h4><b>Description: </b>Sorts a list using insertion sort<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;nums: </b> A list of numbers or objects supprting '<' operator<br><b>Returns: </b>nil
+      <br><br><h4>algo::binary_search( nums, x )</h4><b>Description: </b>Searches for an element in a sorted list using binary search.<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;nums: </b> A sorted list<br><b>&nbsp;&nbsp;&nbsp;&nbsp;x: </b> Element to search for<br><b>Returns: </b>Index of element if found, nil otherwise
+      <br><br><h4>algo::selectionSort( nums )</h4><b>Description: </b>Sorts a list using bubble sort<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;nums: </b> A list of numbers or objects supprting '<' operator<br><b>Returns: </b>nil
+      <br><br><h4>algo::sublist( list, l, h )</h4><b>Description: </b>Returns a portion of a list<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;list: </b> A list<br><b>&nbsp;&nbsp;&nbsp;&nbsp;l: </b> Start idx<br><b>&nbsp;&nbsp;&nbsp;&nbsp;h: </b> End idx<br><b>Returns: </b>A new list having elements of original list from l to h
+      <br><br><h4>algo::mergeSort( nums, l, h )</h4><b>Description: </b>Sorts a list inplace using mergesort<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;nums: </b> A list of numbers<br><b>&nbsp;&nbsp;&nbsp;&nbsp;l: </b> Start idx<br><b>&nbsp;&nbsp;&nbsp;&nbsp;h: </b> End idx<br><b>Returns: </b>nil
+      <br><br><h4>algo::max( list )</h4><b>Description: </b>Returns max from a list<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;list: </b> A list whose elements support '>' operator<br><b>Returns: </b>the max element
+      <br><br><h4>algo::quickSort( nums, l, h )</h4><b>Description: </b>Sorts a list inplace using quicksort<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;nums: </b> A list of numbers<br><b>&nbsp;&nbsp;&nbsp;&nbsp;l: </b> Start idx<br><b>&nbsp;&nbsp;&nbsp;&nbsp;h: </b> End idx<br><b>Returns: </b>nil
+      <br><br><h4>algo::min( list )</h4><b>Description: </b>Returns min from a list<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;list: </b> A list whose elements support '<' operator<br><b>Returns: </b>the min element
+      <br><br><h4>algo::filter( fn, list )</h4><b>Description: </b>Filters elements from a list using given function<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;fn: </b> A callback function f(x) which returns true or false indicating whether x is to be included in the
+                new list or not.<br><b>&nbsp;&nbsp;&nbsp;&nbsp;list: </b> A list<br><b>Returns: </b>a new list
+      <br><br><h4>algo::apply( fn, list )</h4><b>Description: </b>Applies a function on all elements of the list.<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;fn: </b> A callback function f(x)<br><b>&nbsp;&nbsp;&nbsp;&nbsp;list: </b> A list<br><b>Returns: </b>nil
+      <br><br><h4>algo::bubbleSort( nums )</h4><b>Description: </b>Sorts a list using bubble sort<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;nums: </b> A list of numbers or objects supprting '>' operator<br><b>Returns: </b>nil
+      <br><br><h4>algo::linear_search( nums, x )</h4><b>Description: </b>Searches for an element in a list using linear search.<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;nums: </b> A list<br><b>&nbsp;&nbsp;&nbsp;&nbsp;x: </b> Element to search for<br><b>Returns: </b>Index of element if found, nil otherwise
+      <br><br><h4>algo::count( fn, list )</h4><b>Description: </b>Counts elements in the list fulfilling a certain criteria. The criteria is a callback function.<br><b>Parameters: </b><br><b>&nbsp;&nbsp;&nbsp;&nbsp;fn: </b> A callback function f(x) returning either true or false<br><b>&nbsp;&nbsp;&nbsp;&nbsp;list: </b> A list<br><b>Returns: </b>Count of elements that make fn(x) return true
+      <br><br>
+      
+    </div>
+</body>
+</html>
