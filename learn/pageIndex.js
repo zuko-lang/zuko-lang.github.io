@@ -24,8 +24,13 @@ var pageIndex = {
   22: ["File Handling","filehandling.html"],
   23: ["Error handling","errorhandling.html"],
   24: ["Standard Library","stdlib.html"],
-  25: ["Bignumber Module","bignum.html"],
-  "total": 26
+  
+  25: ["Conio Module","conio.html"],
+  26: ["Console Module","console.html"],
+  27: ["Regex Module","regex.html"],
+  28: ["Bignumber Module","bignum.html"],
+  29: ["Mariadb Module","mariadb.html"],
+  "total": 30
 };
 
 window.addEventListener("load",removeWatermark);
